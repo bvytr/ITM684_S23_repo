@@ -161,7 +161,7 @@ from own terminal, ssh into DO server
 </details>
 
 <details>
-<summary><font size="4">Step 9: Singing the OpenVPN Server's Certificate Request</font></summary>
+<summary><font size="4">Step 9: Signing the OpenVPN Server's Certificate Request</font></summary>
 
 * The CA Server needs to know about the OpenVPN Server's Certificate Request and validate it
 * Use `scp` to copy the request to the CA for signing
@@ -230,7 +230,7 @@ from own terminal, ssh into DO server
 <details>
 <summary><font size="4">Step 12: Configuring OpenVPN</font></summary>
 
-* Copy a smaple configuration file included in this software's documentation
+* Copy a sample configuration file included in this software's documentation
     * `sudo cp /usr/share/doc/openvpn/examples/sample-config-files/server.conf /etc/openvpn/server/`
 * `sudo nano /etc/openvpn/server/server.conf`
 *  Change the Default Port and Protocol for the OpenVPN Server
