@@ -6,7 +6,6 @@
 * Deactivate DigitalOcean account and create a new one
 * Deploy a new Droplet to server as the Certificate Authority (CA) Server
     * CA Server IP address: 159.223.133.122
-    * Default root password: ITM684.Vy
 * Log in as root if not already
     * `ssh root@24.199.92.229`
 * Create a new user and grant privileges
@@ -106,7 +105,6 @@ from own terminal, ssh into DO server
 * `exit`
 * Repeat steps 1 and 2 (except for deactivation of DigitalOcean account)
 * OpenVPN Server IP address: 159.223.133.122
-* Default root password: ITM684.Vy
 * Log in as root if not already
     * `ssh root@165.227.87.242`
 * Create a new user and grant privileges
