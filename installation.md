@@ -461,10 +461,19 @@ from own terminal, ssh into DO server
 * Colorizing a bash prompt: 
     * `nano ~/.bashrc`
     * Commented: `PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"`
-    * Pasted: `PS1='\[\033[1;36m\]\u@\h: \w\[\033[0m\]\$ '`
+    * Pasted: 
+        ```
+        bold=$(tput bold)
+        cyan=$(tput setaf 6)
+        magenta=$(tput setaf 5)
+        reset=$(tput sgr0)
+
+        PS1="${bold}${cyan}\u@\h:${magenta}\w${reset}\$ "
+        ```
+    * Also pasted:
+        * `export LS_COLORS='di=1;36:fi=1;33:ln=1;35:pi=1;31:so=1;32:do=1;45:bd=1;44:cd=1;43:su=1;41:sg=1;46:tw=1;42:ow=1;47:st=1;41:ex=1;32:'`
     * Save and exit
     * Reload console
-    * Prompt should now be cyan and bolded
 
 * Colorizing a zsh prompt:
     * `nano ~/.zshrc`
@@ -481,18 +490,11 @@ from own terminal, ssh into DO server
     * `nano ~/.bashrc`
     * Insert the following lines:
         * `alias c='clear'`
-        * `alias ls='ls --color=auto'`
         * `alias ..='cd ..'`
+        * `alias h='history'`
+        * `alias update='sudo apt-get update && sudo apt-get upgrade'`
+        * `alias ports='netstat -tulanp'`
     * Save and exit
     * Reload console
-
-* zsh:
-    * `nano ~/.zshrc`
-    * Insert the following lines:
-        * `alias c='clear'`
-        * `alias ls='ls --color=auto'`
-        * `alias ..='cd ..'`
-    * Save and exit
-    * `source ~/.zshrc`
 </details>
 
