@@ -3,7 +3,7 @@
 <details>
 <summary><font size="4">Step 1: DO Account and Droplet setup</font></summary>
 
-* Create a DigitalOcean.com account
+* Create a [DigitalOcean.com](https://www.digitalocean.com/) account
 * Create an Ubuntu 22.04 Droplet
     * Ubuntu 22.04
     * Basic Shared CPU plan
@@ -28,6 +28,7 @@
 <details>
 <summary><font size="4">Step 3: Set up wireguard</font></summary>
 
+* Followed [thematric.dev tutorial](https://thematrix.dev/setup-wireguard-vpn-server-with-docker/)
 * `mkdir -p ~/wireguard/`
 * `mkdir -p ~/wireguard/config/`
 * `nano ~/wireguard/docker-compose.yml`
@@ -63,7 +64,7 @@
         sysctls:
             - net.ipv4.conf.all.src_valid_mark=1
     ```
-* Make the following edits:
+* Make the following edits (or based on where you yourself are located using [this](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) link):
     * `TZ=Pacific/Honolulu`
     * `SERVERURL=159.203.188.62`
         * Insert your DO IP address
