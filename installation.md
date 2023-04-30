@@ -427,8 +427,30 @@ from own terminal, ssh into DO server
 <summary><font size="4">Step 19: Install Wireguard and IPSec on the same server using AlgoVPN script</font></summary>
 
 * Follow instructions from [trailofbits](https://github.com/trailofbits/algo)
+* Make sure that current directory is home `cd ~`
+* `git clone https://github.com/trailofbits/algo.git`
+* `sudo apt install -y --no-install-recommends python3-virtualenv`
+* `cd algo`
+    ```
+    python3 -m virtualenv --python="$(command -v python3)" .env && 
+    source .env/bin/activate && 
+    python3 -m pip install -U pip virtualenv && 
+    python3 -m pip install -r requirements.txt
+    ```
+* `nano config.cfg`
 * Change Wireguard port to `53`
-* IPSec
+* Change ssh port to `41235`
+* Edit names of users
+* Save and exit
+* `sudo ./algo`
+* Select option 12
+    * insert pic
+* Answer the rest of the questions
+* Press `ENTER` to start the install process
+    * insert pic
+* When asked for the IP address of your server, type `localhost`
+***
+Testing OpenVPN
 
 </details>
 
